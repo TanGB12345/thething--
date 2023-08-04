@@ -1,0 +1,80 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-image: linear-gradient(to bottom right, #000000, #000000, #000000);
+  }
+  
+  .search-container {
+	position: relative;
+	color: #fff;
+	font-size: 16px;
+  }
+  
+  #search-input {
+	width: 300px;
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid transparent;
+	background-color: transparent;
+	color: #fff;
+	outline: none;
+	border-radius: 5px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  #search-input:focus {
+	border: 2px solid #fff;
+  }
+  
+  #search-results {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	background-color: #111;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	display: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  #search-results li {
+	list-style: none;
+	padding: 10px;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  #search-results li:hover {
+	background-color: #444;
+  }
+  
+  #search-results li.active {
+	background-color: #888;
+  }
+  
+  /* Futuristic glow effect */
+  @keyframes glowing {
+	0% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; }
+	50% { box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff; }
+	100% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; }
+  }
+  
+  @-webkit-keyframes glowing {
+	0% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; }
+	50% { box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff; }
+	100% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; }
+  }
+  
+  #search-input:focus {
+	animation: glowing 1.5s infinite;
+	-webkit-animation: glowing 1.5s infinite;
+  }
+  
